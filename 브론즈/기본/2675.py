@@ -41,4 +41,4 @@ for i in range(a):
         
     k.append(b)
 
-print(*k)
+print(*k , sep="\n")

@@ -1,0 +1,73 @@
+# 그동안 백준 문제를 많이 풀었고 풀기만 하면 공부가 안된다 정리를 통해 공부한걸 복습해보자 
+
+입력받기
+
+a=input() or a=int(input()) 
+
+여러개의 값을 한번에 받아야한다면
+
+# a=input().split() 단 int(input().split()) 는 못쓴다 split() 메소드는 문자열에서 호출해야 하므로 쓸수가없다 그러기에
+# int 값을 여러개 받고싶으면 a=map(int,input().split()) 를 써야 한다
+
+import sys
+a=sys.stdin.readline()
+print(a)
+
+#sys.stdin.readline() 문자열을 받는거이면 int(sys.stdin.readline()) 을 하면 된다
+
+# input() 보다 입력시간이 빨라서 문제풀다가 시간초과 날때 쓰면 좋다 
+
+# 만약 한줄에 하나씩 받아야한다면
+
+a=int(input())
+
+for i in range (a) :
+    "입력변수"= input() or int(input())
+
+a= "백준" # 문자열은 파이썬에서 시퀀스 데이터 타입 중 하나로, 리스트와 비슷한 방식으로 인덱싱이 가능합니다
+
+print(a[0])
+print(a[1])
+
+
+a=[1,2,3,4,5,6,7,8,9,10]
+
+#1
+for i in a:
+    print(i) 
+
+# 작동 방식: 이 루프는 리스트 a의 각 요소를 직접 반복(iterate)합니다.
+#            i는 리스트의 각 요소를 순차적으로 가리킵니다.
+
+#2
+for i in range(len(a)): 
+    print(a[i])
+
+# 이 루프는 range(len(a))를 사용하여 인덱스를 생성한 후, 
+# 그 인덱스를 통해 리스트 a의 요소에 접근합니다. 
+# i는 0부터 len(a)-1까지의 인덱스를 가리킵니다.
+
+# 한줄 요약 : 인덱스 접근을 해야한다면 2번 방식 필요없다면 1번이다
+
+
+
+# 배열에 값을 넣는 방식
+
+#1
+a=[]
+b=int(input()) or input()
+a.append(b)
+
+#2
+a=list(map(int,input().split()))
+print(a) 
+
+
+#3
+a=[_ for _ in range (1,11)] # 컴프리헨션을 사용하여 1부터 10까지 만들기 +=) 변수가 필요없으면 _ 처리가 가능하다
+
+리스트 컴프리헨션(List Comprehension)은 파이썬에서 리스트를 간결하게 생성하는 방법이다.
+[표현식 for 항목 in iterable if 조건]
+
+# 예시
+even_numbers = [x for x in range(1, 11) if x % 2 == 0]
