@@ -1,9 +1,11 @@
-import sys
-input = sys.stdin.readline
+j,s = map(int,input().split())
 
-N, M = map(int, input().split())
 
-k="1"
+k= " "*(j)
+
+a= range(1,21)
+
+print(a)
 
 
 

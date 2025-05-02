@@ -1,0 +1,1 @@
+max_value = max(max(row) for row in arr) 
