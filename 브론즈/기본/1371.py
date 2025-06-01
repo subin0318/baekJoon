@@ -1,7 +1,25 @@
-a="안안녕하세요"
+import sys
+input=sys.stdin.read()
+a = input()
+k = {}
 
-for i in range(len(a)) :
-    a.count(a[i])
+for char in a:
+    if char in k:
+        k[char] += 1
+    else:
+        k[char] = 1
 
-print(max(a))
-    
+max_value = max(k.values())
+j = ""
+
+for key, value in k.items():
+    if value == max_value:
+        j += key
+
+# 문자 정렬
+j = ''.join(sorted(j))
+
+print(j)
+
+
+
