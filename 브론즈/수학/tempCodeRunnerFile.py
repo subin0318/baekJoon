@@ -1,2 +1,12 @@
-for vaule in number_count: # 딕셔너리의 vaule 값을 for문을 써서 출력한다
-#     print(number_count[vaule]) # 리스트로 접근
+import sys
+
+T_list = []
+
+T = sys.stdin.readlines()
+
+for line in T:
+    k = int(line.strip()) 
+    T_list.append(k)
+
+print(len(T_list)+1)       
+print(sum(T_list)-1)       
