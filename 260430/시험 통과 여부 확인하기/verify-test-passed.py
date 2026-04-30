@@ -1,3 +1,4 @@
 a=int(input())
 
-print("pass") if a > 80 else print(f"{80-a} more score")
+if a > 80 : print("pass")  
+elif a < 80 : print(80-a,"more score") 
