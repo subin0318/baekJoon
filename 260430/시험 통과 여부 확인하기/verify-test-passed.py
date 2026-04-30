@@ -1,5 +1,6 @@
-a=int(input())
-x= 100 - a
-
-if a >= 80 : print("pass")  
-else: print(x,"more score") 
+n=int(input())
+if n>=80:
+    print('pass')
+else:
+    more =80-n
+    print(more,'more score')
